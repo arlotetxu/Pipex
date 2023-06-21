@@ -31,6 +31,36 @@ void	ft_dup2(void)
 	printf("Hola Mundo a un archivo!!\n");
 }
 
+/*
+ * Funcion que ejecuta el comando execve
+ *
+ * En este ejemplo, el programa llama a execve para ejecutar el comando "ls -l".
+ * La función execve toma tres argumentos:
+ * 1 - El primer argumento "/bin/ls" es la ruta del programa que se va a ejecutar.
+ * 		En este caso, es la ruta del comando "ls" en el sistema.
+ * 2 - El segundo argumento args es un arreglo de cadenas que representa los argumentos del programa.
+ * 		En este caso, pasamos los argumentos "ls" y "-l" para listar el contenido del directorio en formato detallado.
+ * 3 - El tercer argumento NULL se refiere a las variables de entorno y se establece como NULL para utilizar las
+ * 		variables de entorno actuales del programa actual.
+ *
+ * La función execve reemplazará el programa actual con el comando "ls -l", ejecutando el programa y mostrando el
+ * contenido del directorio en formato detallado.
+ * Si ocurre algún error durante la ejecución de execve, se imprimirá un mensaje de error utilizando perror.
+ *
+ * Recuerda que execve reemplaza completamente el programa actual con el nuevo programa, por lo que las líneas de
+ * código después de execve no se ejecutarán a menos que ocurra un error en execve.
+ */
+
+int ft_execve() {
+	char *args[] = {"ls", "-l", NULL};
+	execve("/bin/ls", args, NULL);
+
+	// Esta línea de código solo se ejecutará si ocurre un error en execve
+	perror("execve");
+	return 0;
+}
+
+
 int	main(void)
 {
 	int	fd1[2], fd2;
