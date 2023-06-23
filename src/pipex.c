@@ -45,7 +45,7 @@ int main(int argc, char **argv, char **env)
 		//Funcion para gestionar el primer hijo
 		if (pid == 0)
 		{
-			ft_f_son(fd, argv[1], env);
+			ft_f_son(fd, argv, env);
 		}
 	}
 	return (0);

@@ -25,10 +25,8 @@ char	*ft_where_is(char *cmd, char **env)
 	while (path_arr[i])
 	{
 		if(access(ft_strjoin(path_arr[i],cmd),F_OK) == 0)
-		{
 			//printf("La ruta correcta es: %s\n", path_arr[i]);
 			return(path_arr[i]);
-		}
 		i++;
 	}
 	return (NULL);
@@ -37,15 +35,19 @@ char	*ft_where_is(char *cmd, char **env)
 /*
  * Funcion para generar la escritura en el pipe en el primer hijo
  */
-void	ft_f_son(int *fd, char *cmd, char **env)
+void	ft_f_son(int *fd, char **cmd, char **env)
 {
 	char	*cmd_path;
 
 	printf("FD: %d\n", fd[0]);
-	cmd_path = ft_where_is(cmd, env);
+	cmd_path = ft_where_is(cmd[1], env);
 //	close(fd[READ_END]);
 //	dup2(fd[WRITE_END], STDOUT_FILENO);
 //	close(fd[WRITE_END]);
 	printf("La ruta correcta es: %s\n", cmd_path);
-	//AQUI IRIA LA FUNCION execve
+	/*AQUI IRIA LA FUNCION execve. Ojo, tiene como segundo argumento un argv que
+	 * corresponde con el comando y los flags del mismo. Tenemos que hacer una funcion
+	 * que haga split a los argumentos
+	 */
+
 }
