@@ -39,7 +39,8 @@ char	**ft_get_path_str(char *env)
 		while (path_dir[i][j] != '/')
 			j++;
 		// OJO, uso la ft_substr_ander.c --> Asegurarse que es la que esta en el libft
-		path_dir[i] = ft_substr(path_dir[i], j, ft_strlen(path_dir[i]) - j + 1);
+		path_dir[i] = ft_strjoin(ft_substr(path_dir[i], j,
+						ft_strlen(path_dir[i]) - j + 1), "/");
 		printf("String %d: %s\n", i, path_dir[i]);
 		i++;
 	}
