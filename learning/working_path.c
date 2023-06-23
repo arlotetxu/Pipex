@@ -23,10 +23,33 @@ char	*ft_get_path(char **env)
 	return (0);
 }
 
+char	**ft_get_path_str(char *env)
+{
+	char	**path_dir;
+	int 	i;
+	int 	j;
+
+	path_dir = ft_split(env, ':');
+	if (path_dir == NULL)
+		return (NULL);
+	i = 0;
+	while (path_dir[i])
+	{
+		j = 0;
+		while (path_dir[i][j] != '/')
+			j++;
+		// OJO, uso la ft_substr_ander.c --> Asegurarse que es la que esta en el libft
+		path_dir[i] = ft_substr(path_dir[i], j, ft_strlen(path_dir[i]) - j + 1);
+		printf("String %d: %s\n", i, path_dir[i]);
+		i++;
+	}
+	return(path_dir);
+}
+
 int main(int argc, char **argv, char **env)
 {
 	argv[0] = "Test";
 	if (argc == 2)
-		ft_get_path(env);
+		ft_get_path_str(ft_get_path(env));
 	return (0);
 }
