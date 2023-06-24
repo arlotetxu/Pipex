@@ -12,6 +12,9 @@
 
 #include "../inc/pipex.h"
 
+/*
+ * Funcion para sacar la cadena de texto de PATH del env
+ */
 char	*ft_get_path(char **env)
 {
 	//char	*path;
@@ -31,6 +34,10 @@ char	*ft_get_path(char **env)
 	return (0);
 }
 
+/*
+ * Funcion para exportar a una char** las diferentes cadenas de PATH (separacion ':'
+ * Ademas de eso, añadimos '/' al final de las cadenas para sacar las rutas completas
+ */
 char	**ft_get_path_str(char *env)
 {
 	char	**path_dir;

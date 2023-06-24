@@ -13,7 +13,26 @@
 #include "../inc/pipex.h"
 
 /*
- * Funcion para determinar la ruta del comando 1
+ * Funcion que guarda en un char** el comando y sus argumentos
+ */
+char	**ft_get_cmd_args(char *argv)
+{
+	char	**cmd_args;
+	int 	i = 0;
+
+	cmd_args = NULL;
+	argv = ft_strjoin(argv, " NULL");
+	cmd_args = ft_split(argv, ' ');
+	while (cmd_args[i])
+	{
+		printf("cmd_args[%d]: %s\n", i, cmd_args[i]);
+		i++;
+	}
+	return (cmd_args);
+}
+
+/*
+ * Funcion para determinar la ruta del los comandos
  */
 char	*ft_where_is(char *cmd, char **env)
 {
@@ -35,12 +54,15 @@ char	*ft_where_is(char *cmd, char **env)
 /*
  * Funcion para generar la escritura en el pipe en el primer hijo
  */
-void	ft_f_son(int *fd, char **cmd, char **env)
+void	ft_f_son(int *fd, char **argv, char **env)
 {
 	char	*cmd_path;
+	char	**cmd_args;
 
-	printf("FD: %d\n", fd[0]);
-	cmd_path = ft_where_is(cmd[1], env);
+	printf("FD: %d\n", fd[0]); // Linea a borrar cuando se complete la funcion
+	cmd_args = ft_get_cmd_args(argv[1]);
+	//cmd_path = ft_where_is(argv[1], env);
+	cmd_path = ft_where_is(cmd_args[1], env);
 //	close(fd[READ_END]);
 //	dup2(fd[WRITE_END], STDOUT_FILENO);
 //	close(fd[WRITE_END]);
@@ -48,6 +70,8 @@ void	ft_f_son(int *fd, char **cmd, char **env)
 	/*AQUI IRIA LA FUNCION execve. Ojo, tiene como segundo argumento un argv que
 	 * corresponde con el comando y los flags del mismo. Tenemos que hacer una funcion
 	 * que haga split a los argumentos
+	 * char *args[] = {"ls", "-l", NULL};
+	 * execve("/bin/ls", args, NULL);
 	 */
-
+	//ft_get_cmd_args(argv);
 }

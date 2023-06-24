@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 /*
- * ----------------- PENDIENTE --------------------
+ * ----------------- CHEQUEOS --------------------
  * # CHEQUEOS DE ENTRADA
  * 		- Numero de argumentos?
  * 		- Argumentos validos
@@ -22,8 +22,11 @@
  * 		- OJO a como nos dan los argumentos. Pueden ser separados o todos juntos???
  *
  *
- * 	----------------- ESTRUCTURA -------------------
- * 	1 - Crear primer hijo (funcion)
+ * 	----------------- PENDIENTE -------------------
+ * # Chequeos de entrada.
+ * # Finalizar los pasos del primer hijo.
+ * 		- Cuidado con la funcion execve... Necesita un char** con los argumentos del primer comando.
+ * 			Necesario hacer split de cada ARGV para pasarselo como argumento.
  */
 
 #include "../inc/pipex.h"
