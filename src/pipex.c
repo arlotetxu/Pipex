@@ -33,23 +33,39 @@
 
 int main(int argc, char **argv, char **env)
 {
-	int	fd[2];
-	int pid;
+	int		fd[2];
+	pid_t	pid;
 
-	if (argc == 2)
+	if (argc == 5)
 	{
-		//printf("Entro en la funcion ppal.\n");
+		//CREAR FUNCION CON LOS CHEQUEOS Y REFERENCIARLA AQUI
+
 		//GENERAMOS EL PIPE
 		pipe(fd);
 		//CREAMOS EL PRIMER HIJO
 		pid = fork();
 		if (pid == -1)
-			return(perror("Error\n. Cannot create the first child"), 0);
+			return(perror("Error\n.Cannot create the first child\n"), 0);
 		//Funcion para gestionar el primer hijo
 		if (pid == 0)
-		{
 			ft_f_son(fd, argv, env);
-		}
+//		else
+//		{
+//			//close(fd[WRITE_END]); //Cerramos extremos de escritura del padre que ya no se necesita
+//			//CREAMOS EL SEGUNDO HIJO
+//			pid = fork();
+//			if (pid == -1)
+//				return(perror("Error\n.Cannot create the second child\n"), 0);
+//			if (pid == 0)
+//				ft_s_son(fd, argv, env);
+//			else
+//				close(fd[READ_END]);
+//		}
+
 	}
+	else
+		return (printf("Error.\nInvalid number of arguments\n"), 0); //TODO sustituir printf
+	wait(NULL);
+	wait(NULL);
 	return (0);
 }

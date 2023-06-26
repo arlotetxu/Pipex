@@ -24,11 +24,12 @@
 //PATH FUNCTIONS
 char	*ft_get_path(char **env);
 char	**ft_get_path_str(char *env);
-
-//PIPEX FUNCTIONS
 char	**ft_get_cmd_args(char *argv);
 char	*ft_where_is(char *cmd, char **env);
+
+//PIPEX FUNCTIONS
 void	ft_f_son(int *fd, char **argv, char **env);
+void	ft_s_son(int *fd, char **argv, char **env);
 
 // Defines for fd
 # define READ_END 0

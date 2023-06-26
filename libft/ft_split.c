@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 07:27:59 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/31 21:45:26 by arlo             ###   ########.fr       */
+/*   Updated: 2022/10/03 18:46:40 by jflorido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static int	ft_num_strings(char const *s, char c)
 		}
 		i++;
 	}
-	return (cont + 1);
+	return (cont);
 }
 
 char	**ft_split(char const *s, char c)
@@ -77,8 +77,7 @@ char	**ft_split(char const *s, char c)
 	if (str == NULL)
 		return (NULL);
 	i = 0;
-	j = 1;
-	str[0] = "jmf";
+	j = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] != c)
@@ -86,7 +85,8 @@ char	**ft_split(char const *s, char c)
 			aux = i;
 			while (s[i] != '\0' && s[i] != c)
 				i++;
-			str[j++] = ft_substr(s, aux, i - aux);
+			str[j] = ft_substr(s, aux, i - aux);
+			j++;
 			continue ;
 		}
 		i++;

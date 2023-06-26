@@ -13,65 +13,57 @@
 #include "../inc/pipex.h"
 
 /*
- * Funcion que guarda en un char** el comando y sus argumentos
- */
-char	**ft_get_cmd_args(char *argv)
-{
-	char	**cmd_args;
-	int 	i = 0;
-
-	cmd_args = NULL;
-	argv = ft_strjoin(argv, " NULL");
-	cmd_args = ft_split(argv, ' ');
-	while (cmd_args[i])
-	{
-		printf("cmd_args[%d]: %s\n", i, cmd_args[i]);
-		i++;
-	}
-	return (cmd_args);
-}
-
-/*
- * Funcion para determinar la ruta del los comandos
- */
-char	*ft_where_is(char *cmd, char **env)
-{
-	char	**path_arr;
-	int 	i;
-
-	i = 0;
-	path_arr =ft_get_path_str(ft_get_path(env));
-	while (path_arr[i])
-	{
-		if(access(ft_strjoin(path_arr[i],cmd),F_OK) == 0)
-			//printf("La ruta correcta es: %s\n", path_arr[i]);
-			return(path_arr[i]);
-		i++;
-	}
-	return (NULL);
-}
-
-/*
  * Funcion para generar la escritura en el pipe en el primer hijo
  */
 void	ft_f_son(int *fd, char **argv, char **env)
 {
 	char	*cmd_path;
 	char	**cmd_args;
+	int 	input_f;
+	int 	i = 0;
 
-	printf("FD: %d\n", fd[0]); // Linea a borrar cuando se complete la funcion
-	cmd_args = ft_get_cmd_args(argv[1]);
-	//cmd_path = ft_where_is(argv[1], env);
-	cmd_path = ft_where_is(cmd_args[1], env);
-//	close(fd[READ_END]);
-//	dup2(fd[WRITE_END], STDOUT_FILENO);
-//	close(fd[WRITE_END]);
-	printf("La ruta correcta es: %s\n", cmd_path);
-	/*AQUI IRIA LA FUNCION execve. Ojo, tiene como segundo argumento un argv que
-	 * corresponde con el comando y los flags del mismo. Tenemos que hacer una funcion
-	 * que haga split a los argumentos
-	 * char *args[] = {"ls", "-l", NULL};
-	 * execve("/bin/ls", args, NULL);
-	 */
-	//ft_get_cmd_args(argv);
+	close(fd[READ_END]);
+	cmd_args = ft_get_cmd_args(argv[2]);
+	cmd_path = ft_where_is(cmd_args[0], env);
+	printf("=====Dentro de la funcion=====\n");
+	printf("La ruta correcta 1 es: %s\n", cmd_path);
+	while (cmd_path[i])
+	{
+		printf("Arg-[%d] cmd 1: %s\n", i, cmd_args[i]);
+		i++;
+	}
+	input_f = open(argv[1], O_RDONLY);
+	if (input_f == -1)
+		printf("Error.\nNot possible to read from the input file\n"); //TODO Valorar si convertir la funcion a int para controlar la salida
+	dup2(fd[WRITE_END], STDOUT_FILENO);
+	dup2(input_f, STDIN_FILENO);
+	close(fd[WRITE_END]);
+	execve(cmd_path, cmd_args, env);
+}
+
+/*
+ *
+ */
+void	ft_s_son(int *fd, char **argv, char **env)
+{
+	char	*cmd_path;
+	char	**cmd_args;
+	int 	output_f;
+
+	close(fd[WRITE_END]);
+	//printf("Entro en la funcion s_son0\n");
+	cmd_args = ft_get_cmd_args(argv[3]);
+	cmd_path = ft_where_is(cmd_args[0], env);
+	//printf("La ruta 2 correcta es: %s\n", cmd_path);
+	//printf("Entro en la funcion s_son1\n");
+	output_f = open(argv[4], O_WRONLY | O_CREAT | O_TRUNC , S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
+	if (output_f == -1)
+		printf("Error.\nNot possible to create the output\n"); //TODO Valorar si convertir la funcion a int para controlar la salida
+	//printf("Entro en la funcion s_son2\n");
+	dup2(output_f, STDOUT_FILENO);
+	dup2(fd[READ_END], STDIN_FILENO);
+	//printf("Entro en la funcion s_son3\n");
+	close(fd[READ_END]);
+
+	execve(cmd_path, cmd_args, env);
 }

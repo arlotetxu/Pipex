@@ -23,7 +23,8 @@ char	*ft_get_path(char **env)
 	i = 0;
 	//path = NULL;
 	//printf("Entro en la funcion.\n");
-	while(env[i]) {
+	while(env[i])
+	{
 		if (ft_strncmp(env[i], "PATH", 4) == 0) {
 			//printf("valor de i: %d\n", i);
 			//printf("Cadena retornada: %s\n", env[i]);
@@ -35,7 +36,7 @@ char	*ft_get_path(char **env)
 }
 
 /*
- * Funcion para exportar a una char** las diferentes cadenas de PATH (separacion ':'
+ * Funcion para exportar a un char** las diferentes cadenas de PATH (separacion ':'
  * Ademas de eso, añadimos '/' al final de las cadenas para sacar las rutas completas
  */
 char	**ft_get_path_str(char *env)
@@ -60,4 +61,42 @@ char	**ft_get_path_str(char *env)
 		i++;
 	}
 	return(path_dir);
+}
+
+/*
+ * Funcion que guarda en un char** el comando y sus argumentos
+ */
+char	**ft_get_cmd_args(char *argv)
+{
+	char	**cmd_args;
+	int 	i = 0;
+
+	cmd_args = NULL;
+	//argv = ft_strjoin(argv, " NULL");
+	cmd_args = ft_split(argv, ' ');
+	while (cmd_args[i])
+	{
+		printf("cmd_args[%d]: %s\n", i, cmd_args[i]);
+		i++;
+	}
+	return (cmd_args);
+}
+
+/*
+ * Funcion para determinar la ruta del los comandos
+ */
+char	*ft_where_is(char *cmd, char **env)
+{
+	char	**path_arr;
+	int 	i;
+
+	i = 0;
+	path_arr =ft_get_path_str(ft_get_path(env));
+	while (path_arr[i])
+	{
+		if(access(ft_strjoin(path_arr[i],cmd),F_OK) == 0)
+			return(path_arr[i]);
+		i++;
+	}
+	return (perror("Error.\nNot possible to locate the command."),NULL);
 }
