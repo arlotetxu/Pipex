@@ -64,25 +64,6 @@ char	**ft_get_path_str(char *env)
 }
 
 /*
- * Funcion que guarda en un char** el comando y sus argumentos
- */
-char	**ft_get_cmd_args(char *argv)
-{
-	char	**cmd_args;
-	int 	i = 0;
-
-	cmd_args = NULL;
-	//argv = ft_strjoin(argv, " NULL");
-	cmd_args = ft_split(argv, ' ');
-	while (cmd_args[i])
-	{
-		printf("cmd_args[%d]: %s\n", i, cmd_args[i]);
-		i++;
-	}
-	return (cmd_args);
-}
-
-/*
  * Funcion para determinar la ruta del los comandos
  */
 char	*ft_where_is(char *cmd, char **env)
@@ -98,5 +79,25 @@ char	*ft_where_is(char *cmd, char **env)
 			return(path_arr[i]);
 		i++;
 	}
+	//TODO Como libero este char** (path_arr)??
 	return (perror("Error.\nNot possible to locate the command."),NULL);
+}
+
+/*
+ * Funcion que guarda en un char** el comando y sus argumentos
+ */
+char	**ft_get_cmd_args(char *argv)
+{
+	char	**cmd_args;
+//	int 	i = 0;
+
+	cmd_args = NULL;
+	//argv = ft_strjoin(argv, " NULL");
+	cmd_args = ft_split(argv, ' ');
+//	while (cmd_args[i])
+//	{
+//		printf("IN FUNCTION - cmd_args[%d]: %s\n", i, cmd_args[i]);
+//		i++;
+//	}
+	return (cmd_args);
 }

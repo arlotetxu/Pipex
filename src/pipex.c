@@ -27,6 +27,8 @@
  * # Finalizar los pasos del primer hijo.
  * 		- Cuidado con la funcion execve... Necesita un char** con los argumentos del primer comando.
  * 			Necesario hacer split de cada ARGV para pasarselo como argumento.
+ *
+ * 	#liberar memoria - funciones con ft_split
  */
 
 #include "../inc/pipex.h"
@@ -35,6 +37,9 @@ int main(int argc, char **argv, char **env)
 {
 	int		fd[2];
 	pid_t	pid;
+	char *cmd_path;
+	char **cmd_args;
+//	int i = 0;
 
 	if (argc == 5)
 	{
@@ -45,27 +50,50 @@ int main(int argc, char **argv, char **env)
 		//CREAMOS EL PRIMER HIJO
 		pid = fork();
 		if (pid == -1)
-			return(perror("Error\n.Cannot create the first child\n"), 0);
+		{
+			ft_error_msg("Error\n.Cannot create the first child\n");
+			return (0);
+		}
 		//Funcion para gestionar el primer hijo
 		if (pid == 0)
-			ft_f_son(fd, argv, env);
-//		else
-//		{
-//			//close(fd[WRITE_END]); //Cerramos extremos de escritura del padre que ya no se necesita
-//			//CREAMOS EL SEGUNDO HIJO
-//			pid = fork();
-//			if (pid == -1)
-//				return(perror("Error\n.Cannot create the second child\n"), 0);
-//			if (pid == 0)
-//				ft_s_son(fd, argv, env);
-//			else
-//				close(fd[READ_END]);
-//		}
+		{
+			cmd_args = ft_get_cmd_args(argv[2]);
+			cmd_path = ft_where_is(cmd_args[0], env);
+//			printf("CMD_PATH 1: %s\n", cmd_path);
+//			while (cmd_args[i])
+//			{
+//				printf("CMD_ARGS1-[%d]: %s\n", i, cmd_args[i]);
+//				i++;
+//			}
+			ft_f_son(fd, argv, env, cmd_path, cmd_args);
+			ft_free(cmd_args);
+			free(cmd_path);
+		}
+		else
+		{
+			//i = 0;
+			//waitpid(pid, NULL, 0);
+			wait(NULL);
+			cmd_args = ft_get_cmd_args(argv[3]);
+			cmd_path = ft_where_is(cmd_args[0], env);
+//			printf("CMD_PATH 2: %s\n", cmd_path);
+//			while (cmd_args[i])
+//			{
+//				printf("CMD_ARGS2-[%d]: %s\n", i, cmd_args[i]);
+//				i++;
+//			}
+			ft_s_son(fd, argv, env, cmd_path, cmd_args);
+			ft_free(cmd_args);
+			free(cmd_path);
+		}
 
 	}
 	else
-		return (printf("Error.\nInvalid number of arguments\n"), 0); //TODO sustituir printf
-	wait(NULL);
-	wait(NULL);
+	{
+		ft_error_msg("Error.\nInvalid number of arguments\n");
+		return (0);
+	}
+//	wait(NULL);
+//	wait(NULL);
 	return (0);
 }

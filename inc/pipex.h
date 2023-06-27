@@ -28,8 +28,11 @@ char	**ft_get_cmd_args(char *argv);
 char	*ft_where_is(char *cmd, char **env);
 
 //PIPEX FUNCTIONS
-void	ft_f_son(int *fd, char **argv, char **env);
-void	ft_s_son(int *fd, char **argv, char **env);
+void	ft_free(char **str);
+int		ft_error_msg(char *message);
+void	ft_f_son(int *fd, char **argv, char **env, char *cmd_path, char **cmd_args);
+void	ft_s_son(int *fd, char **argv, char **env, char *cmd_path, char **cmd_args);
+
 
 // Defines for fd
 # define READ_END 0
