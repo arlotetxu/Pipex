@@ -59,6 +59,8 @@ int main(int argc, char **argv, char **env)
 		{
 			cmd_args = ft_get_cmd_args(argv[2]);
 			cmd_path = ft_where_is(cmd_args[0], env);
+			if (cmd_path == NULL)
+				return (0);
 //			printf("CMD_PATH 1: %s\n", cmd_path);
 //			while (cmd_args[i])
 //			{
@@ -76,6 +78,8 @@ int main(int argc, char **argv, char **env)
 			wait(NULL);
 			cmd_args = ft_get_cmd_args(argv[3]);
 			cmd_path = ft_where_is(cmd_args[0], env);
+			if (cmd_path == NULL)
+				return (0);
 //			printf("CMD_PATH 2: %s\n", cmd_path);
 //			while (cmd_args[i])
 //			{

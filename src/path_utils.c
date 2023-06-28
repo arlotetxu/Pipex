@@ -80,7 +80,8 @@ char	*ft_where_is(char *cmd, char **env)
 		i++;
 	}
 	//TODO Como libero este char** (path_arr)??
-	return (perror("Error.\nNot possible to locate the command."),NULL);
+	ft_error_msg("Error.\nNot possible to locate the command.\n");
+	return (NULL);
 }
 
 /*

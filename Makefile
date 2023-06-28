@@ -23,10 +23,6 @@ define HEADER
 ██║     ██║██║     ███████╗██╔╝ ██╗
 ╚═╝     ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝
 
-       _                                                      ___       ___
-  o  _|_  |   _   ._  o   _|   _      /     /\   ._  |    _    |    _    |       | |
-  |   |   |  (_)  |   |  (_|  (_)    /     /--\  |   |_  (_)   |   (/_   |   ><  |_|
- _|
 
 endef
 export HEADER
@@ -45,8 +41,8 @@ OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 
 #Commands
 CC 			= 	gcc
-#CFLAGS 		= 	-Wall -Wextra -Werror -g3 -fsanitize=address
-CFLAGS 		= 	-Wall -Wextra -Werror -g3
+CFLAGS 		= 	-Wall -Wextra -Werror -g3 -fsanitize=address
+#CFLAGS 		= 	-Wall -Wextra -Werror -g3
 RM 			= 	rm -rf
 
 LIBFT_a 	= 	libft/libft.a
