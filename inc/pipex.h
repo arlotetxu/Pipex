@@ -6,12 +6,12 @@
 /*   By: jflorido <jflorido@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 13:06:23 by jflorido          #+#    #+#             */
-/*   Updated: 2023/06/23 13:06:23 by jflorido         ###   ########.fr       */
+/*   Updated: 2023/06/29 19:00:53 by jflorido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PIPEX_PIPEX_H
-# define PIPEX_PIPEX_H
+#ifndef PIPEX_H
+# define PIPEX_H
 
 # include <fcntl.h>
 # include <stdlib.h>
@@ -19,22 +19,28 @@
 # include <string.h>
 # include <unistd.h>
 # include <sys/wait.h>
-#include "../libft/libft.h"
-
+# include "../libft/libft.h"
+// Struct to store the path & comands
+struct s_paths{
+	char	*cmd_path;
+	char	**cmd_args;
+};
+//MAIN FUNCTIONS
+int		main(int argc, char **argv, char **env);
+void	ft_launch_f_son(int *fd, char **argv, char **env);
+void	ft_launch_father(int *fd, char **argv, char **env);
 //PATH FUNCTIONS
 char	*ft_get_path(char **env);
 char	**ft_get_path_str(char *env);
 char	**ft_get_cmd_args(char *argv);
 char	*ft_where_is(char *cmd, char **env);
-
 //PIPEX FUNCTIONS
-void	ft_free(char **str);
+void	ft_free(char **str, char *str2);
 int		ft_error_msg(char *message);
-void	ft_f_son(int *fd, char **argv, char **env, char *cmd_path, char **cmd_args);
-void	ft_s_son(int *fd, char **argv, char **env, char *cmd_path, char **cmd_args);
-
-
+void	ft_f_son(int *fd, char **argv, char **env, struct s_paths t_path);
+void	ft_father(int *fd, char **argv, char **env, struct s_paths t_path);
 // Defines for fd
 # define READ_END 0
 # define WRITE_END 1
-#endif //PIPEX_PIPEX_H
+
+#endif

@@ -15,7 +15,7 @@
 /*
  * Funcion para liberar memoria
  */
-void	ft_free(char **str)
+void	ft_free(char **str, char *str2)
 {
 	int	i;
 
@@ -24,6 +24,7 @@ void	ft_free(char **str)
 		free(str[i++]);
 	free(str[i]);
 	free(str);
+	free(str2);
 }
 
 /*
@@ -43,39 +44,49 @@ int	ft_error_msg(char *message)
 /*
  * Funcion para generar la escritura en el pipe en el primer hijo
  */
-void	ft_f_son(int *fd, char **argv, char **env, char *cmd_path, char **cmd_args)
+void	ft_f_son(int *fd, char **argv, char **env, struct s_paths t_path)
 {
 	char	*cmd_path_com;
-	int 	input_f;
+	int		input_f;
 
 	close(fd[READ_END]);
-	cmd_path_com = ft_strjoin(cmd_path, cmd_args[0]);
-	//printf("Path a buscar en evecve 1 hijo: %s\n", cmd_path_com);
+	if (t_path.cmd_path == NULL)
+		return ;
+	cmd_path_com = ft_strjoin(t_path.cmd_path, t_path.cmd_args[0]);
 	input_f = open(argv[1], O_RDONLY);
 	if (input_f == -1)
+	{
 		ft_error_msg("Error.\nNot possible to read from the input file\n");
+		return ;
+	}
 	dup2(fd[WRITE_END], STDOUT_FILENO);
 	dup2(input_f, STDIN_FILENO);
 	close(fd[WRITE_END]);
-	execve(cmd_path_com, cmd_args, env);
+	execve(cmd_path_com, t_path.cmd_args, env);
 }
 
 /*
  *
  */
-void	ft_s_son(int *fd, char **argv, char **env, char *cmd_path, char **cmd_args)
+void	ft_father(int *fd, char **argv, char **env, struct s_paths t_path)
 {
 	char	*cmd_path_com;
-	int 	output_f;
+	int		output_f;
 
+	wait(NULL);
 	close(fd[WRITE_END]);
-	cmd_path_com = ft_strjoin(cmd_path, cmd_args[0]);
-	//printf("Path a buscar en evecve 2 hijo: %s\n", cmd_path_com);
-	output_f = open(argv[4], O_WRONLY | O_CREAT | O_TRUNC , S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
+	if (t_path.cmd_path == NULL)
+		return ;
+	cmd_path_com = ft_strjoin(t_path.cmd_path, t_path.cmd_args[0]);
+	output_f = open(argv[4], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR
+			| S_IWUSR | S_IRGRP | S_IROTH);
 	if (output_f == -1)
+	{
 		ft_error_msg("Error.\nNot possible to create the output\n");
+		return ;
+	}
 	dup2(output_f, STDOUT_FILENO);
 	dup2(fd[READ_END], STDIN_FILENO);
 	close(fd[READ_END]);
-	execve(cmd_path_com, cmd_args, env);
+	execve(cmd_path_com, t_path.cmd_args, env);
 }
