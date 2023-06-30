@@ -36,7 +36,7 @@ char	**ft_get_cmd_args(char *argv);
 char	*ft_where_is(char *cmd, char **env);
 //PIPEX FUNCTIONS
 void	ft_free(char **str, char *str2);
-int		ft_error_msg(char *message);
+int		ft_error_msg(char *msg);
 void	ft_f_son(int *fd, char **argv, char **env, struct s_paths t_path);
 void	ft_father(int *fd, char **argv, char **env, struct s_paths t_path);
 // Defines for fd

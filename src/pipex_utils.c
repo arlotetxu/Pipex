@@ -13,7 +13,15 @@
 #include "../inc/pipex.h"
 
 /*
- * Funcion para liberar memoria
+ * #FT_FREE
+ * 		The function frees al the mallocs done (specially with ft_split function)
+ *
+ * #PARAMETER
+ * 		- char **str -> a char array.
+ * 		- char **env -> environment variable.
+ *
+ * #RETURN
+ *		-
  */
 void	ft_free(char **str, char *str2)
 {
@@ -28,21 +36,43 @@ void	ft_free(char **str, char *str2)
 }
 
 /*
- * Funcion para escribir los mensajes de error
+ * #FT_ERROR_MSG
+ * 		The function writes an error message in red color.
+ *
+ * #PARAMETER
+ * 		- char * msg -> The string to be printed
+ *
+ * #RETURN
+ *		- 0 when the program finishes.
  */
-int	ft_error_msg(char *message)
+int	ft_error_msg(char *msg)
 {
 	if (1)
 	{
-		write(0, "\033[31m", 6);
-		write(0, message, ft_strlen(message));
-		write(0, "\033[0m", 5);
+		write(0, "\033[0;31m", 7);
+		write(0, msg, ft_strlen(msg));
 	}
 	return (0);
 }
 
 /*
- * Funcion para generar la escritura en el pipe en el primer hijo
+ * #FT_F_SON
+ * 		The function completes the command path (cmd_path_com) adding the command
+ * 		to execute and the end of the string.
+ * 		It duplicates the writing file descriptor in the STDOUT_FILENO so
+ * 		in the output you have the same info than the fd.
+ * 		It duplicates the info in the input fd (input_f) in the STDIN_FILENO so
+ * 		in the input you have the information from the input file.
+ * 		Then, it executes the command through the execve function.
+ *
+ * #PARAMETER
+ * 		- int *fd -> the ipe FDs.
+ * 		- char **argv -> the program input arguments.
+ * 		- char **env -> the environment variables.
+ * 		- struct s_paths t_path -> struct with command arguments & command path.
+ *
+ * #RETURN
+ *		-
  */
 void	ft_f_son(int *fd, char **argv, char **env, struct s_paths t_path)
 {
@@ -66,7 +96,24 @@ void	ft_f_son(int *fd, char **argv, char **env, struct s_paths t_path)
 }
 
 /*
+ * #FT_FATHER
+ * 		The function completes the command path (cmd_path_com) adding the command
+ * 		to execute and the end of the string.
+ * 		It duplicates the output file descriptor in the STDOUT_FILENO so
+ * 		in the output file you'll have the same info than the fd.
+ * 		It duplicates the info from the read file descriptor in the STDIN_FILENO so
+ * 		in the input you have the information from the input file comming from
+ * 		the son.
+ * 		Then, it executes the command through the execve function.
  *
+ * #PARAMETER
+ * 		- int *fd -> the ipe FDs.
+ * 		- char **argv -> the program input arguments.
+ * 		- char **env -> the environment variables.
+ * 		- struct s_paths t_path -> struct with command arguments & command path.
+ *
+ * #RETURN
+ *		-
  */
 void	ft_father(int *fd, char **argv, char **env, struct s_paths t_path)
 {

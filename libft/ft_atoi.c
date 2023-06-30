@@ -93,7 +93,7 @@ int	ft_atoi(const char *str)
 		if (str[i] == 45)
 			sign = -1;
 		i++;
-	}	
+	}
 	n = 0;
 	while (str[i] != '\0' && (str[i] >= 48 && str[i] <= 57))
 	{

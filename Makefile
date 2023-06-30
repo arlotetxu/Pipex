@@ -59,6 +59,7 @@ export HEADER
 # Folders
 SRC_DIR = src/
 OBJ_DIR = obj/
+LIBFT_DIR = libft/
 
 OBJF = obj
 INC = inc
@@ -97,7 +98,7 @@ all: $(NAME)
 # Compiling all
 $(NAME): $(OBJS)
 	@$(MAKE) -C ./libft
-	@$(CC) $(CFLAGS) $(OBJS) -I $(INC) $(LIBFT_a) $(FT_PRINTF_a) -o $(NAME)
+	@$(CC) $(CFLAGS) $(OBJS) -I $(INC) $(LIBFT_a) -o $(NAME)
 	@echo "$(GREEN)$$HEADER$(DEF_COLOR)"
 	@echo "$(GREEN)So_Long compiled!$(DEF_COLOR)"
 
@@ -124,7 +125,7 @@ fclean: clean
 
 re: fclean all
 
-norm:
-	@norminette $(SRC_DIR) $(INC)
+normi:
+	@norminette $(SRC_DIR) $(INC) $(LIBFT_DIR)
 
 .PHONY: all clean fclean re
