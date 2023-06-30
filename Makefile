@@ -66,21 +66,18 @@ INC = inc
 
 # Files
 SRC_FILES = pipex path_utils pipex_utils
-SRCS = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
+#SRCS = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 
 #Commands
 CC 			= 	gcc
-CFLAGS 		= 	-Wall -Wextra -Werror -g3 -fsanitize=address
-#CFLAGS 		= 	-Wall -Wextra -Werror -g3
+SANI 		= 	-g3 -fsanitize=address
+CFLAGS 		= 	-Wall -Wextra -Werror
 RM 			= 	rm -rf
 
 LIBFT_a 	= 	libft/libft.a
 
-#OBJS 		= 	$(SRC:.c=.o)
-
 #Colors:
-
 DEF_COLOR 	= \033[0;39m
 GRAY 		= \033[0;90m
 RED 		= \033[0;31m
@@ -127,5 +124,8 @@ re: fclean all
 
 normi:
 	@norminette $(SRC_DIR) $(INC) $(LIBFT_DIR)
+
+sani: fclean
+	$(MAKE) CFLAGS='$(CFLAGS) $(SANI)' all
 
 .PHONY: all clean fclean re
