@@ -75,7 +75,6 @@ CFLAGS 		= 	-Wall -Wextra -Werror -g3 -fsanitize=address
 RM 			= 	rm -rf
 
 LIBFT_a 	= 	libft/libft.a
-#FT_PRINTF_a	=	ft_printf/libftprintf.a
 
 #OBJS 		= 	$(SRC:.c=.o)
 
@@ -98,8 +97,6 @@ all: $(NAME)
 # Compiling all
 $(NAME): $(OBJS)
 	@$(MAKE) -C ./libft
-	#@$(MAKE) -C ./ft_printf
-	#@$(CC) $(CFLAGS) $(OBJS) -I $(INC) $(LIBFT_a) $(GNL_a) $(FT_PRINTF_a) $(MLX_a) $(MLX) -o $(NAME)
 	@$(CC) $(CFLAGS) $(OBJS) -I $(INC) $(LIBFT_a) $(FT_PRINTF_a) -o $(NAME)
 	@echo "$(GREEN)$$HEADER$(DEF_COLOR)"
 	@echo "$(GREEN)So_Long compiled!$(DEF_COLOR)"
@@ -117,14 +114,12 @@ $(OBJF):
 clean:
 	$(RM) $(OBJS)
 	@make clean -C ./libft
-	#@make clean -C ./ft_printf
 	@echo "$(YELLOW)&(OBJS) --> Files removed.$(DEF_COLOR)"
 
 #Cleanning files and executable
 fclean: clean
 	$(RM) $(NAME)
 	@MAKE fclean -C ./libft
-	#@MAKE fclean -C ./ft_printf
 	@echo "$(RED)$(NAME) Executable files removed!$(DEF_COLOR)"
 
 re: fclean all

@@ -13,7 +13,16 @@
 #include "../inc/pipex.h"
 
 /*
- * Funcion para sacar la cadena de texto de PATH del env
+ * #FT_GET_PATH
+ * 		The function locates within the environment variable, the PATH route
+ * 		where the UNIX functions are.
+ *
+ * #PARAMETER
+ * 		- char **env -> environment variable
+ *
+ * #RETURN
+ *		- env[i] -> The string with the path route.
+ *		- 0 -> The path was not located.
  */
 char	*ft_get_path(char **env)
 {
@@ -34,6 +43,19 @@ char	*ft_get_path(char **env)
  * 	(separacion ':'
  * Ademas de eso, añadimos '/' al final de las cadenas para sacar
  * 	las rutas completas
+ */
+/*
+ * #FT_GET_PATH_STR
+ * 		The function splits all the different routes where the UNIX functions
+ * 		could be. This is done using the ft_split function from libft and using
+ * 		":" as string separator. Additionally, we complete the path routes
+ * 		adding a '/' at the end of each string created.
+ *
+ * #PARAMETER
+ * 		- char *env -> Complete PATH string.
+ *
+ * #RETURN
+ *		- path_dir -> a char ** with the different path routes.
  */
 char	**ft_get_path_str(char *env)
 {
