@@ -21,10 +21,10 @@
 # include <sys/wait.h>
 # include "../libft/libft.h"
 // Struct to store the path & comands
-struct s_paths{
+typedef struct s_paths {
 	char	*cmd_path;
 	char	**cmd_args;
-};
+}				t_path;
 //MAIN FUNCTIONS
 int		main(int argc, char **argv, char **env);
 void	ft_launch_f_son(int *fd, char **argv, char **env);

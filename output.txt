@@ -1,1 +1,14 @@
-       8
+total 120
+-rw-r--r--@  1 arlo  staff    368 Jun 23 14:56 CMakeLists.txt
+-rw-r--r--@  1 arlo  staff   9122 Jun 30 18:26 Makefile
+-rw-r--r--@  1 arlo  staff     33 Jun 19 18:41 README.md
+drwxr-xr-x@ 12 arlo  staff    384 Jun 30 21:08 cmake-build-debug
+drwxr-xr-x@  3 arlo  staff     96 Jul  1 17:13 inc
+-rw-r--r--@  1 arlo  staff    115 Jun 30 16:24 input.txt
+drwxr-xr-x@  9 arlo  staff    288 Jun 30 16:24 learning
+drwxr-xr-x@ 82 arlo  staff   2624 Jul  1 17:17 libft
+drwxr-xr-x@  5 arlo  staff    160 Jul  1 17:17 obj
+-rw-r--r--@  1 arlo  staff      0 Jul  1 17:18 output.txt
+-rwxr-xr-x@  1 arlo  staff  34834 Jul  1 17:17 pipex
+drwxr-xr-x@  2 arlo  staff     64 Jun 30 18:31 pipex_sub
+drwxr-xr-x   5 arlo  staff    160 Jul  1 17:17 src

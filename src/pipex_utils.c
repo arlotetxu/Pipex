@@ -74,15 +74,15 @@ int	ft_error_msg(char *msg)
  * #RETURN
  *		-
  */
-void	ft_f_son(int *fd, char **argv, char **env, struct s_paths t_path)
+void	ft_f_son(int *fd, char **argv, char **env, t_path p_data)
 {
 	char	*cmd_path_com;
 	int		input_f;
 
 	close(fd[READ_END]);
-	if (t_path.cmd_path == NULL)
+	if (p_data.cmd_path == NULL)
 		return ;
-	cmd_path_com = ft_strjoin(t_path.cmd_path, t_path.cmd_args[0]);
+	cmd_path_com = ft_strjoin(p_data.cmd_path, p_data.cmd_args[0]);
 	input_f = open(argv[1], O_RDONLY);
 	if (input_f == -1)
 	{
@@ -92,7 +92,7 @@ void	ft_f_son(int *fd, char **argv, char **env, struct s_paths t_path)
 	dup2(fd[WRITE_END], STDOUT_FILENO);
 	dup2(input_f, STDIN_FILENO);
 	close(fd[WRITE_END]);
-	execve(cmd_path_com, t_path.cmd_args, env);
+	execve(cmd_path_com, p_data.cmd_args, env);
 }
 
 /*
@@ -115,16 +115,16 @@ void	ft_f_son(int *fd, char **argv, char **env, struct s_paths t_path)
  * #RETURN
  *		-
  */
-void	ft_father(int *fd, char **argv, char **env, struct s_paths t_path)
+void	ft_father(int *fd, char **argv, char **env, t_path p_data)
 {
 	char	*cmd_path_com;
 	int		output_f;
 
 	wait(NULL);
 	close(fd[WRITE_END]);
-	if (t_path.cmd_path == NULL)
+	if (p_data.cmd_path == NULL)
 		return ;
-	cmd_path_com = ft_strjoin(t_path.cmd_path, t_path.cmd_args[0]);
+	cmd_path_com = ft_strjoin(p_data.cmd_path, p_data.cmd_args[0]);
 	output_f = open(argv[4], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR
 			| S_IWUSR | S_IRGRP | S_IROTH);
 	if (output_f == -1)
@@ -135,5 +135,5 @@ void	ft_father(int *fd, char **argv, char **env, struct s_paths t_path)
 	dup2(output_f, STDOUT_FILENO);
 	dup2(fd[READ_END], STDIN_FILENO);
 	close(fd[READ_END]);
-	execve(cmd_path_com, t_path.cmd_args, env);
+	execve(cmd_path_com, p_data.cmd_args, env);
 }
