@@ -97,13 +97,13 @@ char	*ft_where_is(char *cmd, char **env)
 			return (path_arr[i]);
 		i++;
 	}
-	ft_error_msg("Error.\nWarning. One command could not be found!!.\n");
+	ft_error_msg("Warning.\nOne command could not be found!!.\n");
 	return (NULL);
 }
 
 /*
  * #FT_GET_CMD_ARGS
- * 		The function gets the command arguments. The ft_split fucntion is used
+ * 		The function gets the command arguments. The ft_split function is used
  * 		to get all the arguments due to they are separated with a space.
  *
  * #PARAMETER
