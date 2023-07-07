@@ -1,0 +1,10 @@
+# ninja log v5
+1	27	1687512529053601123	CMakeFiles/Pipex.dir/libft/ft_substr.c.o	e15cb5be50875e5e
+0	35	1688152126950735555	build.ninja	fd5c6f8661cc22b4
+0	26	1687512529053548748	CMakeFiles/Pipex.dir/libft/ft_strncmp.c.o	856e31c11f9f7b
+0	21	1687512427155492583	CMakeFiles/Pipex.dir/learning/test_header.c.o	c0cacdfa8b33cab6
+1	26	1687512781316943929	CMakeFiles/Pipex.dir/learning/working_path.c.o	20714be74b5b729f
+1	26	1687512529053537456	CMakeFiles/Pipex.dir/libft/ft_strlen.c.o	f7abd53aefa21865
+1	26	1687512529054137291	CMakeFiles/Pipex.dir/libft/ft_split.c.o	42afcdaceaadbc7d
+0	33	1687512427167171553	CMakeFiles/Pipex.dir/learning/initial_pipe.c.o	68d38cb02cf0cef3
+26	58	1687512781349372753	Pipex	b29258b1aaa6b197

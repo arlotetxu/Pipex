@@ -97,6 +97,7 @@ char	*ft_where_is(char *cmd, char **env)
 			return (path_arr[i]);
 		i++;
 	}
+	ft_free(path_arr); //TODO Comprobar que todo ok y no hay mas leaks
 	ft_error_msg("Warning.\nOne command could not be found!!.\n");
 	return (NULL);
 }

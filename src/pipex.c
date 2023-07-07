@@ -34,7 +34,8 @@ void	ft_launch_f_son(int *fd, char **argv, char **env)
 	p_data.cmd_args = ft_get_cmd_args(argv[2]);
 	p_data.cmd_path = ft_where_is(p_data.cmd_args[0], env);
 	ft_f_son(fd, argv, env, p_data);
-	ft_free(p_data.cmd_args, p_data.cmd_path);
+	ft_free(p_data.cmd_args);
+	free(p_data.cmd_path);
 }
 
 /*
@@ -59,7 +60,8 @@ void	ft_launch_father(int *fd, char **argv, char **env)
 	p_data.cmd_args = ft_get_cmd_args(argv[3]);
 	p_data.cmd_path = ft_where_is(p_data.cmd_args[0], env);
 	ft_father(fd, argv, env, p_data);
-	ft_free(p_data.cmd_args, p_data.cmd_path);
+	ft_free(p_data.cmd_args);
+	free(p_data.cmd_path);
 }
 
 int	main(int argc, char **argv, char **env)

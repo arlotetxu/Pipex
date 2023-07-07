@@ -1,0 +1,3 @@
+/Users/arlo/Documents/Mis_Proyectos/42_cursus/Pipex/cmake-build-debug/CMakeFiles/Pipex.dir
+/Users/arlo/Documents/Mis_Proyectos/42_cursus/Pipex/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/arlo/Documents/Mis_Proyectos/42_cursus/Pipex/cmake-build-debug/CMakeFiles/rebuild_cache.dir

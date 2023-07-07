@@ -23,7 +23,7 @@
  * #RETURN
  *		-
  */
-void	ft_free(char **str, char *str2)
+void	ft_free(char **str)
 {
 	int	i;
 
@@ -32,7 +32,6 @@ void	ft_free(char **str, char *str2)
 		free(str[i++]);
 	free(str[i]);
 	free(str);
-	free(str2);
 }
 
 /*
@@ -93,6 +92,7 @@ void	ft_f_son(int *fd, char **argv, char **env, t_path p_data)
 	dup2(input_f, STDIN_FILENO);
 	close(fd[WRITE_END]);
 	execve(cmd_path_com, p_data.cmd_args, env);
+	free(cmd_path_com); //TODO Comprobar que todo ok y no hay mas leaks
 }
 
 /*
@@ -136,4 +136,5 @@ void	ft_father(int *fd, char **argv, char **env, t_path p_data)
 	dup2(fd[READ_END], STDIN_FILENO);
 	close(fd[READ_END]);
 	execve(cmd_path_com, p_data.cmd_args, env);
+	free(cmd_path_com); //TODO Comprobar si todo ok y no hay mas leaks
 }
