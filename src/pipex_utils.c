@@ -92,7 +92,6 @@ void	ft_f_son(int *fd, char **argv, char **env, t_path p_data)
 	dup2(input_f, STDIN_FILENO);
 	close(fd[WRITE_END]);
 	execve(cmd_path_com, p_data.cmd_args, env);
-	free(cmd_path_com); //TODO Comprobar que todo ok y no hay mas leaks
 }
 
 /*
@@ -115,26 +114,37 @@ void	ft_f_son(int *fd, char **argv, char **env, t_path p_data)
  * #RETURN
  *		-
  */
-void	ft_father(int *fd, char **argv, char **env, t_path p_data)
+void	ft_father(int *fd, char **argv, char **env, t_path p_data) //TODO Segmentar funcion (25 lineas)
 {
 	char	*cmd_path_com;
 	int		output_f;
+	pid_t	pid;
 
 	wait(NULL);
 	close(fd[WRITE_END]);
-	if (p_data.cmd_path == NULL)
+	pid = fork();
+	if (pid == -1)
 		return ;
-	cmd_path_com = ft_strjoin(p_data.cmd_path, p_data.cmd_args[0]);
-	output_f = open(argv[4], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR
-			| S_IWUSR | S_IRGRP | S_IROTH);
-	if (output_f == -1)
+	if (pid == 0)
 	{
-		ft_error_msg("Error.\nNot possible to create the output\n");
-		return ;
+		if (p_data.cmd_path == NULL)
+			return ;
+		cmd_path_com = ft_strjoin(p_data.cmd_path, p_data.cmd_args[0]);
+		output_f = open(argv[4], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR
+				| S_IWUSR | S_IRGRP | S_IROTH);
+		if (output_f == -1)
+		{
+			ft_error_msg("Error.\nNot possible to create the output\n");
+			return ;
+		}
+		dup2(output_f, STDOUT_FILENO);
+		dup2(fd[READ_END], STDIN_FILENO);
+		close(fd[READ_END]);
+		execve(cmd_path_com, p_data.cmd_args, env);
 	}
-	dup2(output_f, STDOUT_FILENO);
-	dup2(fd[READ_END], STDIN_FILENO);
-	close(fd[READ_END]);
-	execve(cmd_path_com, p_data.cmd_args, env);
-	free(cmd_path_com); //TODO Comprobar si todo ok y no hay mas leaks
+	else
+	{
+		wait(NULL);
+		close(fd[READ_END]);
+	}
 }

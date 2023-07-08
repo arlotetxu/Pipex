@@ -56,6 +56,7 @@ char	**ft_get_path_str(char *env)
 	char	**path_dir;
 	int		i;
 	int		j;
+	char	*path_route;
 
 	path_dir = ft_split(env, ':');
 	if (path_dir == NULL)
@@ -66,8 +67,10 @@ char	**ft_get_path_str(char *env)
 		j = 0;
 		while (path_dir[i][j] != '/')
 			j++;
-		path_dir[i] = ft_strjoin(ft_substr(path_dir[i], j,
-					ft_strlen(path_dir[i]) - j + 1), "/");
+		path_route = ft_substr(path_dir[i], j, ft_strlen(path_dir[i]) - j + 1);
+		free (path_dir[i]);
+		path_dir[i] = ft_strjoin(path_route, "/");
+		free (path_route);
 		i++;
 	}
 	return (path_dir);
@@ -87,17 +90,26 @@ char	**ft_get_path_str(char *env)
 char	*ft_where_is(char *cmd, char **env)
 {
 	char	**path_arr;
+	char	*path_arr_r;
+	char	*path_acc;
 	int		i;
 
 	i = 0;
 	path_arr = ft_get_path_str(ft_get_path(env));
 	while (path_arr && path_arr[i] != NULL)
 	{
-		if (access (ft_strjoin(path_arr[i], cmd), F_OK) == 0)
-			return (path_arr[i]);
+		path_acc = ft_strjoin(path_arr[i], cmd);
+		if (access (path_acc, F_OK) == 0)
+		{
+			path_arr_r = ft_strdup(path_arr[i]);
+			ft_free(path_arr);
+			free(path_acc);
+			return (path_arr_r);
+		}
+		free(path_acc);
 		i++;
 	}
-	ft_free(path_arr); //TODO Comprobar que todo ok y no hay mas leaks
+	ft_free(path_arr);
 	ft_error_msg("Warning.\nOne command could not be found!!.\n");
 	return (NULL);
 }
