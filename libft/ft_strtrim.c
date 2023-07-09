@@ -65,7 +65,7 @@ static int	pos_right(char const *s1, char const *s2)
 		len = 1;
 	else
 		len = ft_strlen(s1);
-	while (len >= 0)
+	while (len > 0)
 	{
 		j = 0;
 		while (s2[j] != '\0' && s1[len - 1] != s2[j])

@@ -37,8 +37,9 @@ char	*ft_where_is(char *cmd, char **env);
 //PIPEX FUNCTIONS
 void	ft_free(char **str);
 int		ft_error_msg(char *msg);
-void	ft_f_son(int *fd, char **argv, char **env, struct s_paths t_path);
-void	ft_father(int *fd, char **argv, char **env, struct s_paths t_path);
+void	ft_f_son(int *fd, char **argv, char **env, t_path p_data);
+void	ft_s_son(int *fd, char **argv, char **env, t_path p_data);
+void	ft_father(int *fd, char **argv, char **env, t_path p_data);
 // Defines for fd
 # define READ_END 0
 # define WRITE_END 1
