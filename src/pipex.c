@@ -68,9 +68,21 @@ int	main(int argc, char **argv, char **env)
 {
 	int				fd[2];
 	pid_t			pid;
+	int 			fd_in;
 
 	if (argc == 5)
 	{
+		if (argv[2][0] == '\0' || argv[3][0] == '\0')
+		{
+			ft_error_msg("Error.\nNo command!!\n");
+			return (0);
+		}
+		fd_in = open(argv[1], O_RDONLY);
+		if (fd_in == -1)
+		{
+			ft_error_msg("Error.\nInput file cannot be located\n");
+			return (0);
+		}
 		pipe(fd);
 		pid = fork();
 		if (pid == -1)
