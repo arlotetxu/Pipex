@@ -42,17 +42,14 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics"
-				},
-				{
-					"fragment" : "-std=gnu11"
+					"fragment" : "-g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -fcolor-diagnostics"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/Users/arlo/Documents/Mis_Proyectos/42_cursus/Pipex/."
+					"path" : "/Users/jflorido/Documents/42_Cursus/Pipex_Final/."
 				}
 			],
 			"language" : "C",

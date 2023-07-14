@@ -97,7 +97,7 @@ $(NAME): $(OBJS)
 	@$(MAKE) -C ./libft
 	@$(CC) $(CFLAGS) $(OBJS) -I $(INC) $(LIBFT_a) -o $(NAME)
 	@echo "$(GREEN)$$HEADER$(DEF_COLOR)"
-	@echo "$(GREEN)So_Long compiled!$(DEF_COLOR)"
+	@echo "$(GREEN)Pipex compiled!$(DEF_COLOR)"
 
 # Compiling individual
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJF)

@@ -50,6 +50,7 @@ int	ft_error_msg(char *msg)
 	{
 		write(0, "\033[0;31m", 7);
 		write(0, msg, ft_strlen(msg));
+		write(0, "\033[0m", 4);
 	}
 	return (0);
 }
@@ -92,6 +93,7 @@ void	ft_f_son(int *fd, char **argv, char **env, t_path p_data)
 	dup2(fd[WRITE_END], STDOUT_FILENO);
 	dup2(input_f, STDIN_FILENO);
 	close(fd[WRITE_END]);
+	free (p_data.cmd_path);
 	execve(cmd_path_com, p_data.cmd_args, env);
 }
 
@@ -134,6 +136,7 @@ void	ft_s_son(int *fd, char **argv, char **env, t_path p_data)
 	dup2(output_f, STDOUT_FILENO);
 	dup2(fd[READ_END], STDIN_FILENO);
 	close(fd[READ_END]);
+	free (p_data.cmd_path);
 	execve(cmd_path_com, p_data.cmd_args, env);
 }
 

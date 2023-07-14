@@ -1,1 +1,18 @@
-       7
+total 168
+-rw-r--r--   1 jflorido  2022_urduliz    368 Jul 14 08:00 CMakeLists.txt
+-rw-r--r--   1 jflorido  2022_urduliz   9120 Jul 14 13:02 Makefile
+-rw-r--r--   1 jflorido  2022_urduliz    112 Jul 14 08:00 README.md
+drwxr-xr-x   3 jflorido  2022_urduliz    102 Jul 14 08:00 XCode_check
+drwxr-xr-x  13 jflorido  2022_urduliz    442 Jul 14 08:04 cmake-build-debug
+drwxr-xr-x   3 jflorido  2022_urduliz    102 Jul 14 08:00 inc
+-rw-r--r--   1 jflorido  2022_urduliz     76 Jul 14 13:13 input.txt
+drwxr-xr-x   8 jflorido  2022_urduliz    272 Jul 14 08:00 learning
+drwxr-xr-x  82 jflorido  2022_urduliz   2788 Jul 14 13:20 libft
+drwxr-xr-x   5 jflorido  2022_urduliz    170 Jul 14 13:20 obj
+-rw-r--r--   1 jflorido  2022_urduliz      0 Jul 14 13:22 output.txt
+-rw-r--r--   1 jflorido  2022_urduliz      9 Jul 14 13:16 output_2.txt
+-rwxr-xr-x   1 jflorido  2022_urduliz  50880 Jul 14 13:20 pipex
+drwxr-xr-x   3 jflorido  2022_urduliz    102 Jul 14 08:17 pipex.dSYM
+drwxr-xr-x   5 jflorido  2022_urduliz    170 Jul 14 11:18 src
+-rw-r--r--   1 jflorido  2022_urduliz    284 Jul 14 08:00 temp_Macgrind_Dockerfile
+-rw-r--r--   1 jflorido  2022_urduliz      0 Jul 14 11:10 test
