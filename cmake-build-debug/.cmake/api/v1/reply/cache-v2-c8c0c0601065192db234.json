@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/jflorido/Documents/42_Cursus/Pipex_Final/cmake-build-debug"
+			"value" : "/Users/jflorido/Documents/42_Cursus/Pipex/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -443,7 +443,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/jflorido/Documents/42_Cursus/Pipex_Final/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/Users/jflorido/Documents/42_Cursus/Pipex/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -503,7 +503,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/jflorido/Documents/42_Cursus/Pipex_Final"
+			"value" : "/Users/jflorido/Documents/42_Cursus/Pipex"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1079,7 +1079,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/jflorido/Documents/42_Cursus/Pipex_Final/cmake-build-debug"
+			"value" : "/Users/jflorido/Documents/42_Cursus/Pipex/cmake-build-debug"
 		},
 		{
 			"name" : "Pipex_IS_TOP_LEVEL",
@@ -1103,7 +1103,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/jflorido/Documents/42_Cursus/Pipex_Final"
+			"value" : "/Users/jflorido/Documents/42_Cursus/Pipex"
 		},
 		{
 			"name" : "ProcessorCount_cmd_sysctl",

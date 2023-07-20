@@ -1,0 +1,18 @@
+total 176
+-rw-r--r--   1 jflorido  2022_urduliz    368 Jul 20 11:24 CMakeLists.txt
+-rw-r--r--   1 jflorido  2022_urduliz   5549 Jul 20 11:24 Evaluation.docx
+-rw-r--r--   1 jflorido  2022_urduliz   9120 Jul 20 11:24 Makefile
+-rw-r--r--   1 jflorido  2022_urduliz    112 Jul 20 11:24 README.md
+drwxr-xr-x   3 jflorido  2022_urduliz    102 Jul 20 11:24 XCode_check
+drwxr-xr-x  13 jflorido  2022_urduliz    442 Jul 20 11:45 cmake-build-debug
+drwxr-xr-x   3 jflorido  2022_urduliz    102 Jul 20 11:24 inc
+-rw-r--r--   1 jflorido  2022_urduliz     76 Jul 20 11:24 input.txt
+drwxr-xr-x   8 jflorido  2022_urduliz    272 Jul 20 11:24 learning
+drwxr-xr-x  82 jflorido  2022_urduliz   2788 Jul 20 11:46 libft
+drwxr-xr-x   5 jflorido  2022_urduliz    170 Jul 20 11:46 obj
+-rw-r--r--   1 jflorido  2022_urduliz      0 Jul 20 12:21 outfile
+-rw-r--r--   1 jflorido  2022_urduliz      9 Jul 20 12:21 output.txt
+-rwxr-xr-x   1 jflorido  2022_urduliz  50880 Jul 20 11:46 pipex
+drwxr-xr-x   3 jflorido  2022_urduliz    102 Jul 20 11:26 pipex.dSYM
+drwxr-xr-x   5 jflorido  2022_urduliz    170 Jul 20 12:19 src
+-rw-r--r--   1 jflorido  2022_urduliz      0 Jul 20 11:24 test

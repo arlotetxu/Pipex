@@ -53,10 +53,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jflorido/Documents/42_Cursus/Pipex_Final
+CMAKE_SOURCE_DIR = /Users/jflorido/Documents/42_Cursus/Pipex
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jflorido/Documents/42_Cursus/Pipex_Final/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/jflorido/Documents/42_Cursus/Pipex/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Pipex.dir/depend.make
@@ -70,130 +70,130 @@ include CMakeFiles/Pipex.dir/progress.make
 include CMakeFiles/Pipex.dir/flags.make
 
 CMakeFiles/Pipex.dir/learning/test_header.c.o: CMakeFiles/Pipex.dir/flags.make
-CMakeFiles/Pipex.dir/learning/test_header.c.o: /Users/jflorido/Documents/42_Cursus/Pipex_Final/learning/test_header.c
+CMakeFiles/Pipex.dir/learning/test_header.c.o: /Users/jflorido/Documents/42_Cursus/Pipex/learning/test_header.c
 CMakeFiles/Pipex.dir/learning/test_header.c.o: CMakeFiles/Pipex.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex_Final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Pipex.dir/learning/test_header.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Pipex.dir/learning/test_header.c.o -MF CMakeFiles/Pipex.dir/learning/test_header.c.o.d -o CMakeFiles/Pipex.dir/learning/test_header.c.o -c /Users/jflorido/Documents/42_Cursus/Pipex_Final/learning/test_header.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Pipex.dir/learning/test_header.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Pipex.dir/learning/test_header.c.o -MF CMakeFiles/Pipex.dir/learning/test_header.c.o.d -o CMakeFiles/Pipex.dir/learning/test_header.c.o -c /Users/jflorido/Documents/42_Cursus/Pipex/learning/test_header.c
 
 CMakeFiles/Pipex.dir/learning/test_header.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Pipex.dir/learning/test_header.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jflorido/Documents/42_Cursus/Pipex_Final/learning/test_header.c > CMakeFiles/Pipex.dir/learning/test_header.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jflorido/Documents/42_Cursus/Pipex/learning/test_header.c > CMakeFiles/Pipex.dir/learning/test_header.c.i
 
 CMakeFiles/Pipex.dir/learning/test_header.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Pipex.dir/learning/test_header.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jflorido/Documents/42_Cursus/Pipex_Final/learning/test_header.c -o CMakeFiles/Pipex.dir/learning/test_header.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jflorido/Documents/42_Cursus/Pipex/learning/test_header.c -o CMakeFiles/Pipex.dir/learning/test_header.c.s
 
 CMakeFiles/Pipex.dir/learning/working_path.c.o: CMakeFiles/Pipex.dir/flags.make
-CMakeFiles/Pipex.dir/learning/working_path.c.o: /Users/jflorido/Documents/42_Cursus/Pipex_Final/learning/working_path.c
+CMakeFiles/Pipex.dir/learning/working_path.c.o: /Users/jflorido/Documents/42_Cursus/Pipex/learning/working_path.c
 CMakeFiles/Pipex.dir/learning/working_path.c.o: CMakeFiles/Pipex.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex_Final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Pipex.dir/learning/working_path.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Pipex.dir/learning/working_path.c.o -MF CMakeFiles/Pipex.dir/learning/working_path.c.o.d -o CMakeFiles/Pipex.dir/learning/working_path.c.o -c /Users/jflorido/Documents/42_Cursus/Pipex_Final/learning/working_path.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Pipex.dir/learning/working_path.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Pipex.dir/learning/working_path.c.o -MF CMakeFiles/Pipex.dir/learning/working_path.c.o.d -o CMakeFiles/Pipex.dir/learning/working_path.c.o -c /Users/jflorido/Documents/42_Cursus/Pipex/learning/working_path.c
 
 CMakeFiles/Pipex.dir/learning/working_path.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Pipex.dir/learning/working_path.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jflorido/Documents/42_Cursus/Pipex_Final/learning/working_path.c > CMakeFiles/Pipex.dir/learning/working_path.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jflorido/Documents/42_Cursus/Pipex/learning/working_path.c > CMakeFiles/Pipex.dir/learning/working_path.c.i
 
 CMakeFiles/Pipex.dir/learning/working_path.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Pipex.dir/learning/working_path.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jflorido/Documents/42_Cursus/Pipex_Final/learning/working_path.c -o CMakeFiles/Pipex.dir/learning/working_path.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jflorido/Documents/42_Cursus/Pipex/learning/working_path.c -o CMakeFiles/Pipex.dir/learning/working_path.c.s
 
 CMakeFiles/Pipex.dir/libft/ft_strncmp.c.o: CMakeFiles/Pipex.dir/flags.make
-CMakeFiles/Pipex.dir/libft/ft_strncmp.c.o: /Users/jflorido/Documents/42_Cursus/Pipex_Final/libft/ft_strncmp.c
+CMakeFiles/Pipex.dir/libft/ft_strncmp.c.o: /Users/jflorido/Documents/42_Cursus/Pipex/libft/ft_strncmp.c
 CMakeFiles/Pipex.dir/libft/ft_strncmp.c.o: CMakeFiles/Pipex.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex_Final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Pipex.dir/libft/ft_strncmp.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Pipex.dir/libft/ft_strncmp.c.o -MF CMakeFiles/Pipex.dir/libft/ft_strncmp.c.o.d -o CMakeFiles/Pipex.dir/libft/ft_strncmp.c.o -c /Users/jflorido/Documents/42_Cursus/Pipex_Final/libft/ft_strncmp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Pipex.dir/libft/ft_strncmp.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Pipex.dir/libft/ft_strncmp.c.o -MF CMakeFiles/Pipex.dir/libft/ft_strncmp.c.o.d -o CMakeFiles/Pipex.dir/libft/ft_strncmp.c.o -c /Users/jflorido/Documents/42_Cursus/Pipex/libft/ft_strncmp.c
 
 CMakeFiles/Pipex.dir/libft/ft_strncmp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Pipex.dir/libft/ft_strncmp.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jflorido/Documents/42_Cursus/Pipex_Final/libft/ft_strncmp.c > CMakeFiles/Pipex.dir/libft/ft_strncmp.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jflorido/Documents/42_Cursus/Pipex/libft/ft_strncmp.c > CMakeFiles/Pipex.dir/libft/ft_strncmp.c.i
 
 CMakeFiles/Pipex.dir/libft/ft_strncmp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Pipex.dir/libft/ft_strncmp.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jflorido/Documents/42_Cursus/Pipex_Final/libft/ft_strncmp.c -o CMakeFiles/Pipex.dir/libft/ft_strncmp.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jflorido/Documents/42_Cursus/Pipex/libft/ft_strncmp.c -o CMakeFiles/Pipex.dir/libft/ft_strncmp.c.s
 
 CMakeFiles/Pipex.dir/libft/ft_split.c.o: CMakeFiles/Pipex.dir/flags.make
-CMakeFiles/Pipex.dir/libft/ft_split.c.o: /Users/jflorido/Documents/42_Cursus/Pipex_Final/libft/ft_split.c
+CMakeFiles/Pipex.dir/libft/ft_split.c.o: /Users/jflorido/Documents/42_Cursus/Pipex/libft/ft_split.c
 CMakeFiles/Pipex.dir/libft/ft_split.c.o: CMakeFiles/Pipex.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex_Final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Pipex.dir/libft/ft_split.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Pipex.dir/libft/ft_split.c.o -MF CMakeFiles/Pipex.dir/libft/ft_split.c.o.d -o CMakeFiles/Pipex.dir/libft/ft_split.c.o -c /Users/jflorido/Documents/42_Cursus/Pipex_Final/libft/ft_split.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Pipex.dir/libft/ft_split.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Pipex.dir/libft/ft_split.c.o -MF CMakeFiles/Pipex.dir/libft/ft_split.c.o.d -o CMakeFiles/Pipex.dir/libft/ft_split.c.o -c /Users/jflorido/Documents/42_Cursus/Pipex/libft/ft_split.c
 
 CMakeFiles/Pipex.dir/libft/ft_split.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Pipex.dir/libft/ft_split.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jflorido/Documents/42_Cursus/Pipex_Final/libft/ft_split.c > CMakeFiles/Pipex.dir/libft/ft_split.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jflorido/Documents/42_Cursus/Pipex/libft/ft_split.c > CMakeFiles/Pipex.dir/libft/ft_split.c.i
 
 CMakeFiles/Pipex.dir/libft/ft_split.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Pipex.dir/libft/ft_split.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jflorido/Documents/42_Cursus/Pipex_Final/libft/ft_split.c -o CMakeFiles/Pipex.dir/libft/ft_split.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jflorido/Documents/42_Cursus/Pipex/libft/ft_split.c -o CMakeFiles/Pipex.dir/libft/ft_split.c.s
 
 CMakeFiles/Pipex.dir/libft/ft_substr.c.o: CMakeFiles/Pipex.dir/flags.make
-CMakeFiles/Pipex.dir/libft/ft_substr.c.o: /Users/jflorido/Documents/42_Cursus/Pipex_Final/libft/ft_substr.c
+CMakeFiles/Pipex.dir/libft/ft_substr.c.o: /Users/jflorido/Documents/42_Cursus/Pipex/libft/ft_substr.c
 CMakeFiles/Pipex.dir/libft/ft_substr.c.o: CMakeFiles/Pipex.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex_Final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Pipex.dir/libft/ft_substr.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Pipex.dir/libft/ft_substr.c.o -MF CMakeFiles/Pipex.dir/libft/ft_substr.c.o.d -o CMakeFiles/Pipex.dir/libft/ft_substr.c.o -c /Users/jflorido/Documents/42_Cursus/Pipex_Final/libft/ft_substr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Pipex.dir/libft/ft_substr.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Pipex.dir/libft/ft_substr.c.o -MF CMakeFiles/Pipex.dir/libft/ft_substr.c.o.d -o CMakeFiles/Pipex.dir/libft/ft_substr.c.o -c /Users/jflorido/Documents/42_Cursus/Pipex/libft/ft_substr.c
 
 CMakeFiles/Pipex.dir/libft/ft_substr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Pipex.dir/libft/ft_substr.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jflorido/Documents/42_Cursus/Pipex_Final/libft/ft_substr.c > CMakeFiles/Pipex.dir/libft/ft_substr.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jflorido/Documents/42_Cursus/Pipex/libft/ft_substr.c > CMakeFiles/Pipex.dir/libft/ft_substr.c.i
 
 CMakeFiles/Pipex.dir/libft/ft_substr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Pipex.dir/libft/ft_substr.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jflorido/Documents/42_Cursus/Pipex_Final/libft/ft_substr.c -o CMakeFiles/Pipex.dir/libft/ft_substr.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jflorido/Documents/42_Cursus/Pipex/libft/ft_substr.c -o CMakeFiles/Pipex.dir/libft/ft_substr.c.s
 
 CMakeFiles/Pipex.dir/libft/ft_strlen.c.o: CMakeFiles/Pipex.dir/flags.make
-CMakeFiles/Pipex.dir/libft/ft_strlen.c.o: /Users/jflorido/Documents/42_Cursus/Pipex_Final/libft/ft_strlen.c
+CMakeFiles/Pipex.dir/libft/ft_strlen.c.o: /Users/jflorido/Documents/42_Cursus/Pipex/libft/ft_strlen.c
 CMakeFiles/Pipex.dir/libft/ft_strlen.c.o: CMakeFiles/Pipex.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex_Final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Pipex.dir/libft/ft_strlen.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Pipex.dir/libft/ft_strlen.c.o -MF CMakeFiles/Pipex.dir/libft/ft_strlen.c.o.d -o CMakeFiles/Pipex.dir/libft/ft_strlen.c.o -c /Users/jflorido/Documents/42_Cursus/Pipex_Final/libft/ft_strlen.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Pipex.dir/libft/ft_strlen.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Pipex.dir/libft/ft_strlen.c.o -MF CMakeFiles/Pipex.dir/libft/ft_strlen.c.o.d -o CMakeFiles/Pipex.dir/libft/ft_strlen.c.o -c /Users/jflorido/Documents/42_Cursus/Pipex/libft/ft_strlen.c
 
 CMakeFiles/Pipex.dir/libft/ft_strlen.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Pipex.dir/libft/ft_strlen.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jflorido/Documents/42_Cursus/Pipex_Final/libft/ft_strlen.c > CMakeFiles/Pipex.dir/libft/ft_strlen.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jflorido/Documents/42_Cursus/Pipex/libft/ft_strlen.c > CMakeFiles/Pipex.dir/libft/ft_strlen.c.i
 
 CMakeFiles/Pipex.dir/libft/ft_strlen.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Pipex.dir/libft/ft_strlen.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jflorido/Documents/42_Cursus/Pipex_Final/libft/ft_strlen.c -o CMakeFiles/Pipex.dir/libft/ft_strlen.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jflorido/Documents/42_Cursus/Pipex/libft/ft_strlen.c -o CMakeFiles/Pipex.dir/libft/ft_strlen.c.s
 
 CMakeFiles/Pipex.dir/src/pipex.c.o: CMakeFiles/Pipex.dir/flags.make
-CMakeFiles/Pipex.dir/src/pipex.c.o: /Users/jflorido/Documents/42_Cursus/Pipex_Final/src/pipex.c
+CMakeFiles/Pipex.dir/src/pipex.c.o: /Users/jflorido/Documents/42_Cursus/Pipex/src/pipex.c
 CMakeFiles/Pipex.dir/src/pipex.c.o: CMakeFiles/Pipex.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex_Final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Pipex.dir/src/pipex.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Pipex.dir/src/pipex.c.o -MF CMakeFiles/Pipex.dir/src/pipex.c.o.d -o CMakeFiles/Pipex.dir/src/pipex.c.o -c /Users/jflorido/Documents/42_Cursus/Pipex_Final/src/pipex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Pipex.dir/src/pipex.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Pipex.dir/src/pipex.c.o -MF CMakeFiles/Pipex.dir/src/pipex.c.o.d -o CMakeFiles/Pipex.dir/src/pipex.c.o -c /Users/jflorido/Documents/42_Cursus/Pipex/src/pipex.c
 
 CMakeFiles/Pipex.dir/src/pipex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Pipex.dir/src/pipex.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jflorido/Documents/42_Cursus/Pipex_Final/src/pipex.c > CMakeFiles/Pipex.dir/src/pipex.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jflorido/Documents/42_Cursus/Pipex/src/pipex.c > CMakeFiles/Pipex.dir/src/pipex.c.i
 
 CMakeFiles/Pipex.dir/src/pipex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Pipex.dir/src/pipex.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jflorido/Documents/42_Cursus/Pipex_Final/src/pipex.c -o CMakeFiles/Pipex.dir/src/pipex.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jflorido/Documents/42_Cursus/Pipex/src/pipex.c -o CMakeFiles/Pipex.dir/src/pipex.c.s
 
 CMakeFiles/Pipex.dir/src/pipex_utils.c.o: CMakeFiles/Pipex.dir/flags.make
-CMakeFiles/Pipex.dir/src/pipex_utils.c.o: /Users/jflorido/Documents/42_Cursus/Pipex_Final/src/pipex_utils.c
+CMakeFiles/Pipex.dir/src/pipex_utils.c.o: /Users/jflorido/Documents/42_Cursus/Pipex/src/pipex_utils.c
 CMakeFiles/Pipex.dir/src/pipex_utils.c.o: CMakeFiles/Pipex.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex_Final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/Pipex.dir/src/pipex_utils.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Pipex.dir/src/pipex_utils.c.o -MF CMakeFiles/Pipex.dir/src/pipex_utils.c.o.d -o CMakeFiles/Pipex.dir/src/pipex_utils.c.o -c /Users/jflorido/Documents/42_Cursus/Pipex_Final/src/pipex_utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/Pipex.dir/src/pipex_utils.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Pipex.dir/src/pipex_utils.c.o -MF CMakeFiles/Pipex.dir/src/pipex_utils.c.o.d -o CMakeFiles/Pipex.dir/src/pipex_utils.c.o -c /Users/jflorido/Documents/42_Cursus/Pipex/src/pipex_utils.c
 
 CMakeFiles/Pipex.dir/src/pipex_utils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Pipex.dir/src/pipex_utils.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jflorido/Documents/42_Cursus/Pipex_Final/src/pipex_utils.c > CMakeFiles/Pipex.dir/src/pipex_utils.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jflorido/Documents/42_Cursus/Pipex/src/pipex_utils.c > CMakeFiles/Pipex.dir/src/pipex_utils.c.i
 
 CMakeFiles/Pipex.dir/src/pipex_utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Pipex.dir/src/pipex_utils.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jflorido/Documents/42_Cursus/Pipex_Final/src/pipex_utils.c -o CMakeFiles/Pipex.dir/src/pipex_utils.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jflorido/Documents/42_Cursus/Pipex/src/pipex_utils.c -o CMakeFiles/Pipex.dir/src/pipex_utils.c.s
 
 CMakeFiles/Pipex.dir/src/path_utils.c.o: CMakeFiles/Pipex.dir/flags.make
-CMakeFiles/Pipex.dir/src/path_utils.c.o: /Users/jflorido/Documents/42_Cursus/Pipex_Final/src/path_utils.c
+CMakeFiles/Pipex.dir/src/path_utils.c.o: /Users/jflorido/Documents/42_Cursus/Pipex/src/path_utils.c
 CMakeFiles/Pipex.dir/src/path_utils.c.o: CMakeFiles/Pipex.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex_Final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/Pipex.dir/src/path_utils.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Pipex.dir/src/path_utils.c.o -MF CMakeFiles/Pipex.dir/src/path_utils.c.o.d -o CMakeFiles/Pipex.dir/src/path_utils.c.o -c /Users/jflorido/Documents/42_Cursus/Pipex_Final/src/path_utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/Pipex.dir/src/path_utils.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Pipex.dir/src/path_utils.c.o -MF CMakeFiles/Pipex.dir/src/path_utils.c.o.d -o CMakeFiles/Pipex.dir/src/path_utils.c.o -c /Users/jflorido/Documents/42_Cursus/Pipex/src/path_utils.c
 
 CMakeFiles/Pipex.dir/src/path_utils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Pipex.dir/src/path_utils.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jflorido/Documents/42_Cursus/Pipex_Final/src/path_utils.c > CMakeFiles/Pipex.dir/src/path_utils.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jflorido/Documents/42_Cursus/Pipex/src/path_utils.c > CMakeFiles/Pipex.dir/src/path_utils.c.i
 
 CMakeFiles/Pipex.dir/src/path_utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Pipex.dir/src/path_utils.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jflorido/Documents/42_Cursus/Pipex_Final/src/path_utils.c -o CMakeFiles/Pipex.dir/src/path_utils.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jflorido/Documents/42_Cursus/Pipex/src/path_utils.c -o CMakeFiles/Pipex.dir/src/path_utils.c.s
 
 # Object files for target Pipex
 Pipex_OBJECTS = \
@@ -221,7 +221,7 @@ Pipex: CMakeFiles/Pipex.dir/src/pipex_utils.c.o
 Pipex: CMakeFiles/Pipex.dir/src/path_utils.c.o
 Pipex: CMakeFiles/Pipex.dir/build.make
 Pipex: CMakeFiles/Pipex.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex_Final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable Pipex"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jflorido/Documents/42_Cursus/Pipex/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable Pipex"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Pipex.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -233,6 +233,6 @@ CMakeFiles/Pipex.dir/clean:
 .PHONY : CMakeFiles/Pipex.dir/clean
 
 CMakeFiles/Pipex.dir/depend:
-	cd /Users/jflorido/Documents/42_Cursus/Pipex_Final/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jflorido/Documents/42_Cursus/Pipex_Final /Users/jflorido/Documents/42_Cursus/Pipex_Final /Users/jflorido/Documents/42_Cursus/Pipex_Final/cmake-build-debug /Users/jflorido/Documents/42_Cursus/Pipex_Final/cmake-build-debug /Users/jflorido/Documents/42_Cursus/Pipex_Final/cmake-build-debug/CMakeFiles/Pipex.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/jflorido/Documents/42_Cursus/Pipex/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jflorido/Documents/42_Cursus/Pipex /Users/jflorido/Documents/42_Cursus/Pipex /Users/jflorido/Documents/42_Cursus/Pipex/cmake-build-debug /Users/jflorido/Documents/42_Cursus/Pipex/cmake-build-debug /Users/jflorido/Documents/42_Cursus/Pipex/cmake-build-debug/CMakeFiles/Pipex.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Pipex.dir/depend
 
